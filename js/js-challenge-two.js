@@ -22,7 +22,7 @@ function welcomeUser(){
 
 //let userAge =  prompt("How old are you?");
 
-const getUserName = () => {
+const getUserAge = () => {
     if (userAge > 13){
         alert('Welcome, come on in!');
     } else {
@@ -31,34 +31,39 @@ const getUserName = () => {
     
 };
 
-//getUserName();
+//getUserAge();
+
+//to use a ternary
+//userAge < 13 ?  alert('Sorry not old enough') : alert ('Hey welcome')
 
 
 
 //Exercise 4 Temperature in Fahrenheit
-let tempMessage = prompt('What is the temp in Celsius?');
 
-
-const tempChange = (celsius) => {
-    let farenheit = celsius * 9/5 +32;
+const tempChange = () => {
+    let tempMessage = prompt('What is the temp?');
+    let farenheit = tempMessage * 1.8 + 32;
    
-    console.log('Your temp in Farenheit is: ',  farenheit);
+    alert('It is ' + farenheit + '*F outside.');
 };
 
-tempChange();
+//tempChange(45);
 
 //Exercise 5 Guess the number between 1 and 10
 
 
 const guessGame = () => {
-    let guessNum = prompt('Guess a number 1-10');
-
-        if(guessNum === 3){
-            alert('You guess the correct number!');
-        }else{
-            alert('Guess again.');
-        };
-}
+    let correctAnswer = 3;
+        for (let i = 0; i <=2; i++){
+            let guessNum = prompt('Guess a number 1-10');
+            if (guessNum == correctAnswer){
+                alert('You guess the correct number!');
+            }else{
+                alert('Guess again.');
+            }
+            if (i === 2) alert('You are out of guesses');
+        }
+};
 //guessGame();
 
 
